@@ -1,0 +1,15 @@
+<% content_for :dashboard_wrap do %>
+               <%= render 'side_bar' %>
+               <div class="xl:col-span-10 col-span-12  md:mt-5 h-full md:col-span-9">
+                    <div class="grid grid-cols-1 bg-white gap-4 content-center text-center h-full relative">
+                        <div class="">
+                            <%= image_tag 'logo.png', alt: 'logo',class: 'max-w-full h-auto align-middle border-none m-auto' %>
+                          </div>
+                        <h2 class="text-3xl text-themeblack">Welcome To Templur Bit</h2>
+                        <p class="text-xl text-themeblack">Attack Surface Mapping</p>
+                    <a href="#" class=" px-4 py-2 absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-1/2   border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-theme focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"> Scan </a>
+                    </div>
+               </div>
+           
+           <% end%>
+           <%= render 'dashboard_wrap' %>

@@ -1,0 +1,131 @@
+<script>
+        window.onload = function () {
+        var chart = new CanvasJS.Chart("chartContainer", {
+           animationEnabled: true,
+           // theme: "#000",
+           title:{
+              horizontalAlign: "left",
+
+           },
+           data: [{
+              type: "doughnut",
+              startAngle: 60,
+              innerRadius: 25,
+              indexLabelFontSize: 8,
+              indexLabel: "{label}",
+              toolTipContent: "{label}: {y}",
+              indexLabelLineThickness: 2,
+              indexLabelLine: false,
+              // indexLabelPlacement : 'inside',
+              // indexLabelLineWidth : 2,
+              dataPoints: [
+                 { y: 67, label: "Inbox", color: "#e11d48", },
+                 { y: 28, label: "Archives", color: '#e85575' },
+                 { y: 28, label: "Archives", color: '#f08ea3' },
+              ]
+           }],
+        });
+        chart.render();
+          
+    }
+        </script>
+
+
+
+<% content_for :dashboard_wrap do %>
+               <%= render 'side_bar' %>
+               <div class="xl:col-span-10 col-span-12  md:mt-5 h-full md:col-span-9 md:h-[calc(100vh_-_6.5rem)] overflow-auto bg-white">
+                    <div class="grid grid-cols-12 bg-white gap-4 h-full  relative px-4 pt-4">
+                        <div class="col-span-8">
+                            <div class="pb-8 border-b-2 border-b-gray-100">
+                               <div>
+                                  <h5 class="text-black mb leading-none text-3xl font-bold">1.Summary</h5>
+                               </div>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-2 col-span-6">
+                          <div class="pb-4 border-b-2 border-b-gray-100">
+                        <a href="#" class="border-2 border-rose-600 text-rose-600 w-full px-4 py-2 bg-white-to-b from-themelight to-theme rounded-md flex items-center justify-center hover:bg-rose-600 hover:text-white"><span class="mr-3"> <i class="fas fa-eye"></i> </span>  Preview</a>  
+                      </div>
+                      </div>
+                      <div class="lg:col-span-2  col-span-6">
+                          <div class="pb-4 border-b-2 border-b-gray-100">
+                          <a href="#" class="border-2 border-rose-600 text-rose-600 w-full px-4 py-2 bg-white-to-b from-themelight to-theme rounded-md flex items-center justify-center hover:bg-rose-600 hover:text-white"><span class="mr-3"><i class="fas fa-arrow-down"></i></span>  Download</a>  
+                      </div> 
+                      </div>
+                            <div class="col-span-12">
+                                <h2 class="text-black  leading-none text-3xl font-bold">1.3 Port Open Condition</h2>
+                                <p class="text-gray-400 lg:mt-2 lg:ml-1  leading-none text-1xl font-400">IP Resource Distribution</p>
+                            </div>
+                            <div class="col-span-12">
+                                <div class="grid grid-cols-12 border-2 border-lightgray rounded-md p-3">
+                                    <div class="col-span-12 lg:col-span-4">
+                                        <h6 class="text-sm mb-3"><i class="fa-solid fa-circle text-theme mr-2"></i> 5432</h6>
+                                        <h6 class="text-sm mb-3"><i class="fa-solid fa-circle text-themelight mr-2"></i> 3306</h6>
+                                        <h6 class="text-sm mb-3"><i class="fa-solid fa-circle text-themextlight mr-2"></i> 443</h6>
+                                        <h6 class="text-sm mb-3"><i class="fa-solid fa-circle text-themexxtlight mr-2"></i> 21</h6>
+                                    </div>
+                                    <div class="col-span-12 lg:col-span-4 lg:pr-20">
+                                        <div id="chartContainer" style="height: 110px; width: 100%;"></div>
+                                    </div>
+                                    <div class="col-span-12 lg:col-span-4">
+                                        <div class="flex w-full p-1">
+                                            <div class="w-1/3">
+                                                <h6>5432</h6>
+                                            </div>
+                                            <div class="w-1/3">
+                                                <h6 class="text-center">1</h6>
+                                            </div>
+                                            <div class="w-1/3">
+                                                <h6 class="text-right">25.00%</h6>
+                                            </div>
+                                        </div>
+                                        <div class="flex w-full p-1 bg-lightgray rounded-md">
+                                            <div class="w-1/3">
+                                                <h6>5432</h6>
+                                            </div>
+                                            <div class="w-1/3">
+                                                <h6 class="text-center">1</h6>
+                                            </div>
+                                            <div class="w-1/3">
+                                                <h6 class="text-right">25.00%</h6>
+                                            </div>
+                                        </div>
+                                        <div class="flex w-full p-1">
+                                            <div class="w-1/3">
+                                                <h6>5432</h6>
+                                            </div>
+                                            <div class="w-1/3">
+                                                <h6 class="text-center">1</h6>
+                                            </div>
+                                            <div class="w-1/3">
+                                                <h6 class="text-right">25.00%</h6>
+                                            </div>
+                                        </div>
+                                        <div class="flex w-full p-1 bg-lightgray rounded-md">
+                                            <div class="w-1/3">
+                                                <h6>5432</h6>
+                                            </div>
+                                            <div class="w-1/3">
+                                                <h6 class="text-center">1</h6>
+                                            </div>
+                                            <div class="w-1/3">
+                                                <h6 class="text-right">25.00%</h6>
+                                            </div>
+                                        </div>
+                                        <div class="my-3">
+                                            <h6 class="text-center">Total : 4</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <a href="#" class=" px-4 py-2 absolute bottom-0/3 lg:bottom-0 z-30 left-1/2   border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-theme focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"> Scan </a>
+                    <!-- <div  class="md:grid md:grid-cols-10 bg-white gap-4  text-center  relative px-4 pt-4">
+                       <div class="col-span-2 py-1"></div>
+                    </div> -->
+               </div>
+           
+           <% end%>
+           <%= render 'dashboard_wrap' %>
+      <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>

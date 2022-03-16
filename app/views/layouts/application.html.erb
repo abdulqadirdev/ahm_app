@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AhmApp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+
+    <%# <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %> 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script>
+         tailwind.config = {
+           theme: {
+             extend: {
+               colors: {
+                 theme: '#e11d48',
+                 themeblack: '#1d2e3c',
+                 themelight: '#e84e70',
+                 lightgray: '#f5f5f5',
+                 gray: '#e1e1e1',
+                 themextlight: '#f08ea3',
+                 themexxtlight: '#f7c6d1',
+               },
+               objectPosition: {
+                'center-bottom': 'center bottom',
+            },
+             }
+           }
+         }
+      </script>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <main class="dashboard-body h-screen bg-lightgray">
+    <%= render 'shared/header' %>
+      <%= yield %>
+    </main>
+  </body>
+</html>

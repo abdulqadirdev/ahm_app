@@ -1,0 +1,85 @@
+<header class="bg-white lg:static lg:overflow-y-visible">
+            <div class="px-4 sm:px-6">
+               <div class="relative flex justify-between grid grid-cols-12 lg:gap-4 sm:gap-2">
+                  <div class="flex left-0 inset-y-0 static col-span-2">
+                     <div class="flex-shrink-0 flex items-center">
+                        <a href="#" class="flex">
+                        <%= image_tag 'logo.png', alt: 'logo', class: 'block h-8 w-auto' %>
+                        <h3 class="text-1xl ml-4"> <span class="hidden lg:block">Templur Bit</span></h3>
+                        </a>
+                     </div>
+                  </div>
+                  <!-- <div class="min-w-0 flex-1 md:px-8 lg:px-0 xl:col-span-">
+                     <div class="flex items-center px-6 py-4 md:max-w-3xl md:mx-auto lg:max-w-none lg:mx-0 xl:px-0">
+                     <div class="w-full">
+                         <label for="search" class="sr-only">Search</label>
+                         <div class="relative">
+                         <input id="search" name="search" class="block w-full bg-theme-body rounded-md py-3 pl-10 pr-3 text-sm placeholder-gray-500 focus:outline-none focus:text-gray-900 focus:placeholder-gray-400 focus:border-indigo-500 sm:text-sm" placeholder="Search" type="search">
+                         <div class="pointer-events-none absolute inset-y-0 right-0 pr-3 flex items-center">
+                             <svg class="h-7 w-7 text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 19" fill="currentColor" aria-hidden="true">
+                             <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+                             </svg>
+                         </div>
+                         </div>
+                     </div>
+                     </div>
+                     </div> -->
+                  <div class="flex items-center justify-end col-span-10">
+                     <!-- Profile dropdown -->
+                     <div class="grow py-3">
+                        <label for="search" class="sr-only">Search</label>
+                        <div class="relative">
+                           <input id="search" name="search" class="block w-full bg-lightgray rounded-md py-3 pl-10 pr-3 text-sm placeholder-gray-500 focus:outline-none focus:text-gray-900 focus:placeholder-gray-400 focus:border-indigo-500 sm:text-sm" placeholder="Search" type="search">
+                           <div class="pointer-events-none absolute inset-y-0 right-0 pr-3 flex items-center">
+                              <!-- Heroicon name: solid/search -->
+                              <svg class="h-7 w-7 text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 19" fill="currentColor" aria-hidden="true">
+                                 <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+                              </svg>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="flex-shrink-0 relative lg:ml-5">
+                        <!--
+                           Dropdown menu, show/hide based on menu state.
+                           
+                           Entering: "transition ease-out duration-100"
+                           From: "transform opacity-0 scale-95"
+                           To: "transform opacity-100 scale-100"
+                           Leaving: "transition ease-in duration-75"
+                           From: "transform opacity-100 scale-100"
+                           To: "transform opacity-0 scale-95"
+                           -->
+                     </div>
+                     <a href="#" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-theme focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 hidden md:block"> Track New Asset </a>
+                     <!-- This example requires Tailwind CSS v2.0+ -->
+                     <div class="relative inline-block text-left">
+                        <a href="#" id="dropdown-btn" class="ml-3 xlg:ml-5 flex w-10 h-10 items-center justify-center rounded-full bg-theme text-4xl pb-2 text-white">+</a>
+                        
+                     
+                        <!--
+                        Dropdown menu, show/hide based on menu state.
+                     
+                        Entering: "transition ease-out duration-100"
+                           From: "transform opacity-0 scale-95"
+                           To: "transform opacity-100 scale-100"
+                        Leaving: "transition ease-in duration-75"
+                           From: "transform opacity-100 scale-100"
+                           To: "transform opacity-0 scale-95"
+                        -->
+                        <div id="dropdown1" class="origin-top-right absolute right-0 mt-2 w-72 rounded-md shadow-2xl bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-10 invisible" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+                        <div class="p-3" role="none">
+                           <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
+                           <form>
+                           <input type="search" class="bg-gray p-2 text-sm w-full rounded-md mb-3" placeholder="New Scan Task" >
+                           <textarea name="ip" rows="3" class="rounded-md bg-lightgray w-full resize-none p-2 mb-2" placeholder="IP/Domain :"></textarea>
+                              <button type="submit" class="text-gray-700 block w-full text-center bg-theme text-white rounded-md px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-3">Start</button>
+                           </form>
+                        </div>
+                        </div>
+                     </div>
+ 
+                  </div>
+               </div>
+            </div>
+            <!-- Mobile menu, show/hide based on menu state. -->
+         </header>

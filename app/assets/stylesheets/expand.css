@@ -1,0 +1,9 @@
+.expand-table-area {
+    min-width: 900px;
+}
+.expand-table {
+    display: none;
+}
+.active .expand-table {
+    display: block;
+}

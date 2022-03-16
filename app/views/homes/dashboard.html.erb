@@ -1,0 +1,216 @@
+
+<script>
+         window.onload = function () {
+         var chart = new CanvasJS.Chart("chartContainer", {
+            animationEnabled: true,
+            // theme: "#000",
+            title:{
+               horizontalAlign: "left",
+
+            },
+            data: [{
+               type: "doughnut",
+               startAngle: 60,
+               innerRadius: 25,
+               indexLabelFontSize: 8,
+               indexLabel: "{label}",
+               toolTipContent: "{label}: {y}",
+               indexLabelLineThickness: 2,
+               indexLabelLine: false,
+               // indexLabelPlacement : 'inside',
+               // indexLabelLineWidth : 2,
+               dataPoints: [
+                  { y: 67, label: "Inbox", color: "#e11d48", },
+                  { y: 28, label: "Archives", color: '#e85575' },
+                  { y: 28, label: "Archives", color: '#f08ea3' },
+               ]
+            }],
+         });
+         chart.render();
+           
+         var chart2 = new CanvasJS.Chart("chartContainer2", {
+            animationEnabled: true,
+            // theme: "#000",
+            title:{
+               horizontalAlign: "left",
+
+            },
+            data: [{
+               type: "doughnut",
+               startAngle: 60,
+               innerRadius: 25,
+               indexLabelFontSize: 8,
+               indexLabel: "{label}",
+               toolTipContent: "{label}: {y}",
+               indexLabelLineThickness: 2,
+               indexLabelLine: false,
+               // indexLabelPlacement : 'inside',
+               // indexLabelLineWidth : 2,
+               dataPoints: [
+                  { y: 67, label: "Inbox", color: "#e11d48", },
+                  { y: 28, label: "Archives", color: '#e85575' },
+                  { y: 28, label: "Archives", color: '#f08ea3' },
+               ]
+            }],
+         });
+         chart2.render();
+
+         }
+         </script>
+
+
+
+
+<% content_for :dashboard_wrap do %>
+               <%= render 'side_bar' %>
+                <div class="xl:col-span-10 col-span-12  md:mt-5 h-full md:col-span-9 h-full relative md:h-[calc(100vh_-_6.5rem)] overflow-auto bg-white">
+                    <div class="grid grid-cols-12 gap-4  text-center  px-4 pt-4">
+                        <div class="col-span-6 lg:col-span-3">
+                            <div class="h-28 w-full bg-gradient-to-b from-themelight to-theme rounded-md flex items-center justify-center">
+                               <div>
+                                  <h5 class="text-white mb leading-none">Asset</h5>
+                                  <h4 class="text-white text-3xl font-bold">12</h4>
+                               </div>
+                            </div>
+                        </div>
+                        <div class="col-span-6 lg:col-span-3">
+                            <div class="h-28 w-full bg-gradient-to-b from-themelight to-theme rounded-md flex items-center justify-center">
+                               <div>
+                                  <h5 class="text-white mb leading-none">Active IP</h5>
+                                  <h4 class="text-white text-3xl font-bold">1</h4>
+                               </div>
+                            </div>
+                        </div>
+                        <div class="col-span-6 lg:col-span-3">
+                            <div class="h-28 w-full bg-gradient-to-b from-themelight to-theme rounded-md flex items-center justify-center">
+                               <div>
+                                  <h5 class="text-white mb leading-none">Port</h5>
+                                  <h4 class="text-white text-3xl font-bold">18</h4>
+                               </div>
+                            </div>
+                        </div>
+                        <div class="col-span-6 lg:col-span-3">
+                            <div class="h-28 w-full bg-gradient-to-b from-themelight to-theme rounded-md flex items-center justify-center">
+                               <div>
+                                  <h5 class="text-white mb leading-none">Vulnerability</h5>
+                                  <h4 class="text-white text-3xl font-bold">0</h4>
+                               </div>
+                            </div>
+                        </div>
+                     </div>
+                     <a href="#" class=" px-2 py-2 absolute bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-1/2   border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-theme focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-theme"> Scan </a>
+                    <div class="md:grid md:grid-cols-10 bg-white gap-4  text-center  relative px-4 pt-4">
+                       <div class="lg:col-span-2 py-1 md:col-span-3 col-span-10">
+                          <div class="flex items-center justify-between mb-3">
+                             <div class="flex items-center">
+                                <img src="./images/software.png" alt=""> 
+                                <h6 class="text-black ml-2 text-lg font-semibold">software</h6>
+                                <!-- <i class="far fa-check-circle theme"></i> -->
+                                <i class="fa-regular fa-circle-check ml-3 text-theme text-xl"></i>
+                             </div>
+                             <i class="fa-solid fa-chevron-right"></i>
+                          </div>
+                          <div class="px-3 py-6 bg-lightgray rounded-md">
+                           <div id="chartContainer" style="height: 110px; width: 100%;"></div>
+                          </div>
+                       </div>
+                       <div class="lg:col-span-2 py-1 md:col-span-3 col-span-10">
+                          <div class="flex items-center justify-between mb-3">
+                             <div class="flex items-center">
+                                <img src="./images/software.png" alt=""> 
+                                <h6 class="text-black ml-2 text-lg font-semibold">software</h6>
+                                <!-- <i class="far fa-check-circle theme"></i> -->
+                                <i class="fa-regular fa-circle-check ml-3 text-theme text-xl"></i>
+                             </div>
+                             <i class="fa-solid fa-chevron-right"></i>
+                          </div>
+                          <div class="px-3 py-6 bg-lightgray rounded-md">
+                           <div id="chartContainer2" style="height: 110px; width: 100%;"></div>
+                          </div>
+                       </div>
+                       <div class="lg:col-span-2 py-1 md:col-span-3 col-span-10">
+                          <div class="flex items-center justify-between mb-3">
+                             <div class="flex items-center">
+                                <img src="./images/software.png" alt=""> 
+                                <h6 class="text-black ml-2 text-lg font-semibold">software</h6>
+                                <!-- <i class="far fa-check-circle theme"></i> -->
+                                <i class="fa-regular fa-circle-check ml-3 text-theme text-xl"></i>
+                             </div>
+                             <i class="fa-solid fa-chevron-right"></i>
+                          </div>
+                          <div class="px-3 py-6 bg-lightgray rounded-md">
+                             <div class="flex items-center justify-between mb-1">
+                                <h6 class="text-sm">22</h6>
+                                <h6 class="text-sm">33</h6>
+                             </div>
+                             <div class="flex items-center justify-between mb-1">
+                                <h6 class="text-sm">22</h6>
+                                <h6 class="text-sm">33</h6>
+                             </div>
+                             <div class="flex items-center justify-between mb-1">
+                                <h6 class="text-sm">22</h6>
+                                <h6 class="text-sm">33</h6>
+                             </div>
+                             <div class="flex items-center justify-between mb-1">
+                                <h6 class="text-sm">22</h6>
+                                <h6 class="text-sm">33</h6>
+                             </div>
+                             <div class="flex items-center justify-between mb-1">
+                                <h6 class="text-sm">22</h6>
+                                <h6 class="text-sm">33</h6>
+                             </div>
+                          </div>
+                       </div>
+                       <div class="lg:col-span-2 py-1 md:col-span-3 col-span-10">
+                          <div class="flex items-center justify-between mb-3">
+                             <div class="flex items-center">
+                                <img src="./images/software.png" alt=""> 
+                                <h6 class="text-black ml-2 text-lg font-semibold">software</h6>
+                                <!-- <i class="far fa-check-circle theme"></i> -->
+                                <i class="fa-regular fa-circle-check ml-3 text-theme text-xl"></i>
+                             </div>
+                             <i class="fa-solid fa-chevron-right"></i>
+                          </div>
+                          <div class="px-3 py-6 bg-lightgray rounded-md">
+                             <div class="flex items-center justify-between mb-1">
+                                <h6 class="text-sm">10.10.10.91</h6>
+                                <h6 class="text-sm">33</h6>
+                             </div>
+                             <div class="flex items-center justify-between mb-1">
+                                <h6 class="text-sm">10.10.10.91</h6>
+                                <h6 class="text-sm">33</h6>
+                             </div>
+                             <div class="flex items-center justify-between mb-1">
+                                <h6 class="text-sm">10.10.10.91</h6>
+                                <h6 class="text-sm">33</h6>
+                             </div>
+                             <div class="flex items-center justify-between mb-1">
+                                <h6 class="text-sm">10.10.10.91</h6>
+                                <h6 class="text-sm">33</h6>
+                             </div>
+                             <div class="flex items-center justify-between mb-1">
+                                <h6 class="text-sm">10.10.10.91</h6>
+                                <h6 class="text-sm">33</h6>
+                             </div>
+                          </div>
+                       </div>
+                       <div class="lg:col-span-2 py-1 md:col-span-3 col-span-10">
+                          <div class="flex items-center justify-between mb-3">
+                             <div class="flex items-center">
+                                <img src="./images/software.png" alt=""> 
+                                <h6 class="text-black ml-2 text-lg font-semibold">software</h6>
+                                <!-- <i class="far fa-check-circle theme"></i> -->
+                                <i class="fa-regular fa-circle-check ml-3 text-theme text-xl"></i>
+                             </div>
+                             <i class="fa-solid fa-chevron-right"></i>
+                          </div>
+                          <div class="px-3 py-6 bg-lightgray rounded-md">
+                             
+                          </div>
+                       </div>
+                    </div>
+               </div>
+           
+           <% end%>
+           <%= render 'dashboard_wrap' %>
+      <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>

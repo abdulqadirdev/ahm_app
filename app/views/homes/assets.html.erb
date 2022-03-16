@@ -1,0 +1,224 @@
+<% content_for :dashboard_wrap do %>
+               <%= render 'side_bar' %>
+              <div class="xl:col-span-10 col-span-12  md:mt-5 h-full md:col-span-9 md:h-[calc(100vh_-_6.5rem)] overflow-auto bg-white">
+                    <div class="grid grid-cols-12 bg-white gap-4 h-full  relative px-4 pt-4">
+                        <div class="lg:col-span-8 col-span-12">
+                            <div class="pb-8 border-b-2 border-b-gray-100">
+                               <div>
+                                  <h5 class="text-black mb leading-none text-3xl font-bold">1.Summary</h5>
+                               </div>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-2 col-span-6">
+                          <div class="pb-4 border-b-2 border-b-gray-100">
+                        <a href="#" class="border-2 border-rose-600 text-rose-600 w-full px-4 py-2 bg-white-to-b from-themelight to-theme rounded-md flex items-center justify-center hover:bg-rose-600 hover:text-white"><span class="mr-3"> <i class="fas fa-eye"></i> </span>  Preview</a>  
+                      </div>
+                      </div>
+                      <div class="lg:col-span-2  col-span-6">
+                          <div class="pb-4 border-b-2 border-b-gray-100">
+                          <a href="#" class="border-2 border-rose-600 text-rose-600 w-full px-4 py-2 bg-white-to-b from-themelight to-theme rounded-md flex items-center justify-center hover:bg-rose-600 hover:text-white"><span class="mr-3"><i class="fas fa-arrow-down"></i></span>  Download</a>  
+                      </div> 
+                      </div>
+                            <div class="col-span-12">
+                                <h2 class="text-black  leading-none text-3xl font-bold">1.4 Asset</h2>
+                            </div>
+                            <div class="col-span-12" id="expand-area">
+                              <div class="w-full">
+                                  <div class="w-full">
+                                      <div class="flex items-center">
+                                          <div>
+                                              <a href="#" class="expend-btn lg:mr-4  flex w-10 h-10 items-center justify-center rounded-full bg-theme text-4xl pb-2 text-white">+</a>
+                                          </div>
+                                          <div class="leading-none">
+                                              <h2 class="text-black leading-none leading-none text-2xl font-medium">luminade.co.uk</h2><br>
+                                              <p class=" lg:font-400 lg:text-2xl text-gray-400">50.87.187.137</p>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="w-full">
+                                      <div class="flex flex-col">
+                                          <div class="main-table expand-table">
+                                            <div class="py-2 inline-block min-w-full sm:px-6 lg:px-0 overflow-auto">
+                                              <div class="expand-table-area">
+                                                <table class="main-table-2 w-full">
+                                                  <thead class="border-b bg-gray-100">
+                                                    <tr>
+                                                      <th scope="col" class="text-sm font-medium text-gray-900  text-left">
+                                                          Subdomain
+                                                      </th>
+                                                      <th scope="col" class="text-sm font-medium text-gray-900 py-4 text-left">
+                                                        Port
+                                                      </th>
+                                                      <th scope="col" class="text-sm font-medium text-gray-900 py-4 text-left">
+                                                        Portocol
+                                                      </th>
+                                                      <th scope="col" class="text-sm font-medium text-gray-900  py-4 text-left">
+                                                        Component
+                                                      </th>
+                                                    </tr>
+                                                    <tr class="bg-white h-5"></tr>
+                                                  </thead>
+                                                  <tbody>
+                                                    <tr class="border-b">
+                                                      <td  class="font-400 text-1xl text-gray-600 whitespace-nowrap">ftp.luminad.co.uk</td>
+                                                      <td valign="top" class="font-400 text-1xl text-gray-600 leading-tightwhitespace-nowrap"><span>433</span>  <span class="ml-2 leading-tight"><i class="fas fa-wifi"></i></span> <span class="ml-2"><i class="fas fa-search"></i></span><br>
+                                                          <span class="leading-9">433</span> <span class="ml-2"><i class="fas fa-wifi"></i></span> <span class="ml-2 leading-9"><i class="fas fa-search"></i></span><br>
+                                                          <span class="leading-9">433</span> <span class="ml-2 leading-9"><i class="fas fa-wifi"></i></span> <span class="ml-2 leading-9"><i class="fas fa-search"></i></span><br>
+                                                          <span class="leading-9">433</span> <span class="ml-2 leading-9"><i class="fas fa-wifi"></i></span> <span class="ml-2 leading-9"><i class="fas fa-search"></i></span>
+                                                      <td valign="top" class="font-400 text-1xl text-gray-600 leading-9 whitespace-nowrap">Web <br> Postgres <br> MySql <br> FTP</td>
+                                                      <td valign="top" class="bg-rose-400 text-center items-center justify-center whitespace-nowrap leading-9 px-2 py-2"><span>-</span> <br><span class="bg-rose-300 rounded-full mb-2  px-2 text-1xl font-medium text-white "> jQuery</span>
+                                                          <span class="bg-rose-300 rounded-full mb-2  px-2 text-lg font-medium text-white "> Bootstrap</span><br>
+                                                          <span class="bg-rose-300 rounded-full mb-2  px-2 text-sm h-8 font-medium text-white "> PostgresSQL</span>
+                                                          <span class="bg-rose-300 rounded-full mb-2  px-2 text-sm h-8 font-medium text-white "> Apache Web-Server</span><br>
+                                                          <span class="bg-rose-300 rounded-full mb-2  px-2 text-sm h-8 font-medium text-white "> MySQL | 5.7.23-23</span>
+                                                          <span class="bg-rose-300 rounded-full mb-2  px-2 text-sm h-8 font-medium text-white "> Pure-Ftp</span><br>
+                                                          <span>-</span> <br>
+                                                          <span>-</span></td>
+                                                    </tr>
+                                                  
+                                                  <tbody>
+                                                  
+                                                  </tbody>
+                                                </table>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                  </div>
+                              </div>
+                              <div class="w-full">
+                                  <div class="w-full">
+                                      <div class="flex items-center">
+                                          <div>
+                                              <a href="#" class="expend-btn lg:mr-4  flex w-10 h-10 items-center justify-center rounded-full bg-theme text-4xl pb-2 text-white">+</a>
+                                          </div>
+                                          <div class="leading-none">
+                                              <h2 class="text-black leading-none leading-none text-2xl font-medium">luminade.co.uk</h2><br>
+                                              <p class=" lg:font-400 lg:text-2xl text-gray-400">50.87.187.137</p>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="w-full">
+                                      <div class="flex flex-col">
+                                          <div class="main-table expand-table">
+                                            <div class="py-2 inline-block min-w-full sm:px-6 lg:px-0 overflow-auto">
+                                              <div class="expand-table-area">
+                                                <table class="main-table-2 w-full">
+                                                  <thead class="border-b bg-gray-100">
+                                                    <tr>
+                                                      <th scope="col" class="text-sm font-medium text-gray-900  text-left">
+                                                          Subdomain
+                                                      </th>
+                                                      <th scope="col" class="text-sm font-medium text-gray-900 py-4 text-left">
+                                                        Port
+                                                      </th>
+                                                      <th scope="col" class="text-sm font-medium text-gray-900 py-4 text-left">
+                                                        Portocol
+                                                      </th>
+                                                      <th scope="col" class="text-sm font-medium text-gray-900  py-4 text-left">
+                                                        Component
+                                                      </th>
+                                                    </tr>
+                                                    <tr class="bg-white h-5"></tr>
+                                                  </thead>
+                                                  <tbody>
+                                                    <tr class="border-b">
+                                                      <td  class="font-400 text-1xl text-gray-600 whitespace-nowrap">ftp.luminad.co.uk</td>
+                                                      <td valign="top" class="font-400 text-1xl text-gray-600 leading-tightwhitespace-nowrap"><span>433</span>  <span class="ml-2 leading-tight"><i class="fas fa-wifi"></i></span> <span class="ml-2"><i class="fas fa-search"></i></span><br>
+                                                          <span class="leading-9">433</span> <span class="ml-2"><i class="fas fa-wifi"></i></span> <span class="ml-2 leading-9"><i class="fas fa-search"></i></span><br>
+                                                          <span class="leading-9">433</span> <span class="ml-2 leading-9"><i class="fas fa-wifi"></i></span> <span class="ml-2 leading-9"><i class="fas fa-search"></i></span><br>
+                                                          <span class="leading-9">433</span> <span class="ml-2 leading-9"><i class="fas fa-wifi"></i></span> <span class="ml-2 leading-9"><i class="fas fa-search"></i></span>
+                                                      <td valign="top" class="font-400 text-1xl text-gray-600 leading-9 whitespace-nowrap">Web <br> Postgres <br> MySql <br> FTP</td>
+                                                      <td valign="top" class="bg-rose-400 text-center items-center justify-center whitespace-nowrap leading-9 px-2 py-2"><span>-</span> <br><span class="bg-rose-300 rounded-full mb-2  px-2 text-1xl font-medium text-white "> jQuery</span>
+                                                          <span class="bg-rose-300 rounded-full mb-2  px-2 text-lg font-medium text-white "> Bootstrap</span><br>
+                                                          <span class="bg-rose-300 rounded-full mb-2  px-2 text-sm h-8 font-medium text-white "> PostgresSQL</span>
+                                                          <span class="bg-rose-300 rounded-full mb-2  px-2 text-sm h-8 font-medium text-white "> Apache Web-Server</span><br>
+                                                          <span class="bg-rose-300 rounded-full mb-2  px-2 text-sm h-8 font-medium text-white "> MySQL | 5.7.23-23</span>
+                                                          <span class="bg-rose-300 rounded-full mb-2  px-2 text-sm h-8 font-medium text-white "> Pure-Ftp</span><br>
+                                                          <span>-</span> <br>
+                                                          <span>-</span></td>
+                                                    </tr>
+                                                  
+                                                  <tbody>
+                                                  
+                                                  </tbody>
+                                                </table>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                  </div>
+                              </div>
+                              <div class="w-full">
+                                  <div class="w-full">
+                                      <div class="flex items-center">
+                                          <div>
+                                              <a href="#" class="expend-btn lg:mr-4  flex w-10 h-10 items-center justify-center rounded-full bg-theme text-4xl pb-2 text-white">+</a>
+                                          </div>
+                                          <div class="leading-none">
+                                              <h2 class="text-black leading-none leading-none text-2xl font-medium">luminade.co.uk</h2><br>
+                                              <p class=" lg:font-400 lg:text-2xl text-gray-400">50.87.187.137</p>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="w-full">
+                                      <div class="flex flex-col">
+                                          <div class="main-table expand-table">
+                                            <div class="py-2 inline-block min-w-full sm:px-6 lg:px-0 overflow-auto">
+                                              <div class="expand-table-area">
+                                                <table class="main-table-2 w-full">
+                                                  <thead class="border-b bg-gray-100">
+                                                    <tr>
+                                                      <th scope="col" class="text-sm font-medium text-gray-900  text-left">
+                                                          Subdomain
+                                                      </th>
+                                                      <th scope="col" class="text-sm font-medium text-gray-900 py-4 text-left">
+                                                        Port
+                                                      </th>
+                                                      <th scope="col" class="text-sm font-medium text-gray-900 py-4 text-left">
+                                                        Portocol
+                                                      </th>
+                                                      <th scope="col" class="text-sm font-medium text-gray-900  py-4 text-left">
+                                                        Component
+                                                      </th>
+                                                    </tr>
+                                                    <tr class="bg-white h-5"></tr>
+                                                  </thead>
+                                                  <tbody>
+                                                    <tr class="border-b">
+                                                      <td  class="font-400 text-1xl text-gray-600 whitespace-nowrap">ftp.luminad.co.uk</td>
+                                                      <td valign="top" class="font-400 text-1xl text-gray-600 leading-tightwhitespace-nowrap"><span>433</span>  <span class="ml-2 leading-tight"><i class="fas fa-wifi"></i></span> <span class="ml-2"><i class="fas fa-search"></i></span><br>
+                                                          <span class="leading-9">433</span> <span class="ml-2"><i class="fas fa-wifi"></i></span> <span class="ml-2 leading-9"><i class="fas fa-search"></i></span><br>
+                                                          <span class="leading-9">433</span> <span class="ml-2 leading-9"><i class="fas fa-wifi"></i></span> <span class="ml-2 leading-9"><i class="fas fa-search"></i></span><br>
+                                                          <span class="leading-9">433</span> <span class="ml-2 leading-9"><i class="fas fa-wifi"></i></span> <span class="ml-2 leading-9"><i class="fas fa-search"></i></span>
+                                                      <td valign="top" class="font-400 text-1xl text-gray-600 leading-9 whitespace-nowrap">Web <br> Postgres <br> MySql <br> FTP</td>
+                                                      <td valign="top" class="bg-rose-400 text-center items-center justify-center whitespace-nowrap leading-9 px-2 py-2"><span>-</span> <br><span class="bg-rose-300 rounded-full mb-2  px-2 text-1xl font-medium text-white "> jQuery</span>
+                                                          <span class="bg-rose-300 rounded-full mb-2  px-2 text-lg font-medium text-white "> Bootstrap</span><br>
+                                                          <span class="bg-rose-300 rounded-full mb-2  px-2 text-sm h-8 font-medium text-white "> PostgresSQL</span>
+                                                          <span class="bg-rose-300 rounded-full mb-2  px-2 text-sm h-8 font-medium text-white "> Apache Web-Server</span><br>
+                                                          <span class="bg-rose-300 rounded-full mb-2  px-2 text-sm h-8 font-medium text-white "> MySQL | 5.7.23-23</span>
+                                                          <span class="bg-rose-300 rounded-full mb-2  px-2 text-sm h-8 font-medium text-white "> Pure-Ftp</span><br>
+                                                          <span>-</span> <br>
+                                                          <span>-</span></td>
+                                                    </tr>
+                                                  
+                                                  <tbody>
+                                                  
+                                                  </tbody>
+                                                </table>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                  </div>
+                              </div>
+                            </div>
+                    </div>
+                    <a href="#" class=" px-4 py-2 absolute bottom-0 z-30 left-1/2   border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-theme focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"> Scan </a>
+                    <!-- <div  class="md:grid md:grid-cols-10 bg-white gap-4  text-center  relative px-4 pt-4">
+                       <div class="col-span-2 py-1"></div>
+                    </div> -->
+               </div>
+           
+           <% end%>
+           <%= render 'dashboard_wrap' %>
