@@ -6,75 +6,17 @@ background: linear-gradient(0deg, rgba(226,37,79,1) 0%, rgba(232,78,111,1) 100%)
 </style>
 
 
-
-<script>
-         window.onload = function () {
-         var chart = new CanvasJS.Chart("chartContainer", {
-            animationEnabled: true,
-            // theme: "#000",
-            title:{
-               horizontalAlign: "left",
-
-            },
-            data: [{
-               type: "doughnut",
-               startAngle: 60,
-               innerRadius: 25,
-               indexLabelFontSize: 8,
-               indexLabel: "{label}",
-               toolTipContent: "{label}: {y}",
-               indexLabelLineThickness: 2,
-               indexLabelLine: false,
-               // indexLabelPlacement : 'inside',
-               // indexLabelLineWidth : 2,
-               dataPoints: [
-                  { y: 67, label: "Inbox", color: "#e11d48", },
-                  { y: 28, label: "Archives", color: '#e85575' },
-                  { y: 28, label: "Archives", color: '#f08ea3' },
-               ]
-            }],
-         });
-         chart.render();
-           
-         var chart2 = new CanvasJS.Chart("chartContainer2", {
-            animationEnabled: true,
-            // theme: "#000",
-            title:{
-               horizontalAlign: "left",
-
-            },
-            data: [{
-               type: "doughnut",
-               startAngle: 60,
-               innerRadius: 25,
-               indexLabelFontSize: 8,
-               indexLabel: "{label}",
-               toolTipContent: "{label}: {y}",
-               indexLabelLineThickness: 2,
-               indexLabelLine: false,
-               // indexLabelPlacement : 'inside',
-               // indexLabelLineWidth : 2,
-               dataPoints: [
-                  { y: 67, label: "Inbox", color: "#e11d48", },
-                  { y: 28, label: "Archives", color: '#e85575' },
-                  { y: 28, label: "Archives", color: '#f08ea3' },
-               ]
-            }],
-         });
-         chart2.render();
-
-         }
-         </script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js'></script>
 
 
 
 
          <% content_for :dashboard_wrap do %>
                <%= render 'side_bar' %>
-                <div class="xl:col-span-10 col-span-12  md:mt-5 h-full md:col-span-9 h-full relative md:h-[calc(100vh_-_6.5rem)] overflow-auto bg-white">
+                 <div class="xl:col-span-10 col-span-12  md:mt-5 h-full md:col-span-9 h-full relative md:h-[calc(100vh_-_6.5rem)] overflow-auto bg-white">
                     <div class="grid grid-cols-12 gap-4  text-center  px-4 pt-4">
                         <div class="col-span-6 lg:col-span-3">
-                            <div class="h-28 w-full bg-gradient-to-b bg-rose-500 to-theme rounded-md flex items-center justify-center">
+                            <div class="h-28 w-full box-gradient rounded-md flex items-center justify-center">
                                <div>
                                   <h5 class="text-white mb leading-none">Asset</h5>
                                   <h4 class="text-white text-3xl font-bold">12</h4>
@@ -82,7 +24,7 @@ background: linear-gradient(0deg, rgba(226,37,79,1) 0%, rgba(232,78,111,1) 100%)
                             </div>
                         </div>
                         <div class="col-span-6 lg:col-span-3">
-                            <div class="h-28 w-full bg-gradient-to-b bg-rose-500 to-theme rounded-md flex items-center justify-center">
+                            <div class="h-28 w-full box-gradient rounded-md flex items-center justify-center">
                                <div>
                                   <h5 class="text-white mb leading-none">Active IP</h5>
                                   <h4 class="text-white text-3xl font-bold">1</h4>
@@ -90,7 +32,7 @@ background: linear-gradient(0deg, rgba(226,37,79,1) 0%, rgba(232,78,111,1) 100%)
                             </div>
                         </div>
                         <div class="col-span-6 lg:col-span-3">
-                            <div class="h-28 w-full bg-gradient-to-b bg-rose-500 to-theme rounded-md flex items-center justify-center">
+                            <div class="h-28 w-full box-gradient rounded-md flex items-center justify-center">
                                <div>
                                   <h5 class="text-white mb leading-none">Port</h5>
                                   <h4 class="text-white text-3xl font-bold">18</h4>
@@ -98,7 +40,7 @@ background: linear-gradient(0deg, rgba(226,37,79,1) 0%, rgba(232,78,111,1) 100%)
                             </div>
                         </div>
                         <div class="col-span-6 lg:col-span-3">
-                            <div class="h-28 w-full bg-gradient-to-b bg-rose-500 to-theme rounded-md flex items-center justify-center">
+                            <div class="h-28 w-full box-gradient rounded-md flex items-center justify-center">
                                <div>
                                   <h5 class="text-white mb leading-none">Vulnerability</h5>
                                   <h4 class="text-white text-3xl font-bold">0</h4>
@@ -119,7 +61,7 @@ background: linear-gradient(0deg, rgba(226,37,79,1) 0%, rgba(232,78,111,1) 100%)
                                 <%= image_tag 'down-arrow.svg', alt: 'icon' %>
                           </div>
                           <div class="px-3 py-6 bg-lightgray rounded-md">
-                           <div id="chartContainer" style="height: 110px; width: 100%;"></div>
+                           <div class="col-xs-3 text-center" style="width:120px; margin: 0 auto;"><canvas id="piechart" ></canvas></div>
                           </div>
                        </div>
                        <div class="lg:col-span-2 py-1 md:col-span-3 col-span-10">
@@ -133,7 +75,8 @@ background: linear-gradient(0deg, rgba(226,37,79,1) 0%, rgba(232,78,111,1) 100%)
                                 <%= image_tag 'down-arrow.svg', alt: 'icon' %>
                           </div>
                           <div class="px-3 py-6 bg-lightgray rounded-md">
-                           <div id="chartContainer2" style="height: 110px; width: 100%;"></div>
+                            <div class="col-xs-3 text-center" style="width:120px; margin: 0 auto;"><canvas id="piechart2" ></canvas></div>
+
                           </div>
                        </div>
                        <div class="lg:col-span-2 py-1 md:col-span-3 col-span-10">
@@ -213,4 +156,128 @@ background: linear-gradient(0deg, rgba(226,37,79,1) 0%, rgba(232,78,111,1) 100%)
            
            <% end%>
            <%= render 'dashboard_wrap' %>
-      <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script>
+var data = {
+	labels: [
+		"Internal",
+		"External",
+		"Exxternal"
+	],
+	datasets: [{
+		data: [40, 60, 80],
+		backgroundColor: [
+			"#e11d48",
+			"#e11d48ad",
+			"#a5153599"
+		],
+		hoverBorderColor: [
+			"#eee", "#eee", "#eee"
+		]
+	}]
+};
+var piectx = document.getElementById("piechart").getContext("2d");
+var pieChart = new Chart(piectx, {
+	type: 'doughnut',
+	data: data,
+	options: {
+		showAllTooltips: true,
+		animation: {
+			animateRotate: true,
+			animateScale: true
+		},
+		elements: {
+			arc: {
+				borderColor: "transparent"
+			}
+		},
+		title: {
+			display: false,
+		},
+		legend: {
+			display: false,
+			position: "bottom",
+			labels: {
+				boxWidth: 30,
+				fontColor: "#999",
+				fontFamily: "Montserrat",
+				fullWidth: true
+			}
+		},
+		tooltips: {
+			enabled: true,
+			bodyFontColor: "#efefef",
+			fontStyle: 'Normal',
+			bodyFontFamily: "Montserrat",
+			cornerRadius: 2,
+			backgroundColor: "#333",
+			xPadding: 7,
+			yPadding: 7,
+			caretSize: 5,
+			bodySpacing: 10
+		}
+
+	}
+});
+var data = {
+	labels: [
+		"Internal",
+		"External",
+		"Exxternal"
+	],
+	datasets: [{
+		data: [40, 60, 80],
+		backgroundColor: [
+			"#e11d48",
+			"#e11d48ad",
+			"#a5153599"
+		],
+		hoverBorderColor: [
+			"#eee", "#eee", "#eee"
+		],
+        hoverOffset: 4
+	}]
+};
+var piectx = document.getElementById("piechart2").getContext("2d");
+var pieChart = new Chart(piectx, {
+	type: 'doughnut',
+	data: data,
+	options: {
+		showAllTooltips: true,
+		animation: {
+			animateRotate: true,
+			animateScale: true
+		},
+		elements: {
+			arc: {
+				borderColor: "transparent"
+			}
+		},
+		title: {
+			display: false,
+		},
+		legend: {
+			display: false,
+			position: "bottom",
+			labels: {
+				boxWidth: 30,
+				fontColor: "#999",
+				fontFamily: "Montserrat",
+				fullWidth: true
+			}
+		},
+		tooltips: {
+			enabled: true,
+			bodyFontColor: "#efefef",
+			fontStyle: 'Normal',
+			bodyFontFamily: "Montserrat",
+			cornerRadius: 2,
+			backgroundColor: "#333",
+			xPadding: 7,
+			yPadding: 7,
+			caretSize: 5,
+			bodySpacing: 10
+		}
+
+	}
+});
+</script>

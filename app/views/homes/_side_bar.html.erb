@@ -9,21 +9,21 @@
                         </svg>
                       </button>
                     </div>
-                    <nav :class="{'block': open, 'hidden': !open}" class="flex-grow md:block px-4 pb-4 md:pb-0 md:overflow-y-auto">
-                      <%= link_to root_path, class: 'block px-4 py-2 mt-2 text-sm font-semibold text-gray-900 flex items-center bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline', data:{ turbo: false} do %>
-                      <%= image_tag 'icon4.png', alt: 'src', class: 'mr-2' %>
+                    <nav :class="{'block': open, 'hidden': !open}" class="flex-grow md:block pl-2 pb-4 md:pb-0 md:overflow-y-auto">
+                      <%= link_to root_path, class: 'block px-2 py-2 mt-2 text-sm font-semibold text-gray-900 flex items-center bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline' do %>
+                      <%= image_tag 'home.svg', alt: 'src', class: 'mr-3 w-6 h-6' %>
                       <%= 'Home'%>
                       <% end %>
-                      <%= link_to assets_path, class: 'block px-4 py-2 mt-2 text-sm font-semibold text-gray-900 flex items-center bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline', data:{ turbo: false} do %>
-                      <%= image_tag 'icon3.png', alt: 'src', class: 'mr-2' %>
+                      <%= link_to assets_path, class: 'block px-2 py-2 mt-2 text-sm font-semibold text-gray-900 flex items-center bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline' do %>
+                      <%= image_tag 'asset.svg', alt: 'src', class: 'mr-3 w-6 h-6' %>
                       <%= 'Assets'%>
                       <% end %>
-                      <%= link_to assets_path, class: 'block px-4 py-2 mt-2 text-sm font-semibold text-gray-900 flex items-center bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline', data:{ turbo: false} do %>
-                      <%= image_tag 'icon2.png', alt: 'src', class: 'mr-2' %>
-                      <%= 'Valuncatry'%>
+                      <%= link_to all_assets_path, class: 'block px-2 py-2 mt-2 text-sm font-semibold text-gray-900 flex items-center bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline' do %>
+                      <%= image_tag 'virus.svg', alt: 'src', class: 'mr-3 w-6 h-6' %>
+                      <%= 'Vulnerability - Coming Soon'%>
                       <% end %>
-                      <%= link_to assets_path, class: 'block px-4 py-2 mt-2 text-sm font-semibold text-gray-900 flex items-center bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline', data:{ turbo: false} do %>
-                      <%= image_tag 'icon1.png', alt: 'src', class: 'mr-2' %>
+                      <%= link_to assets_path, class: 'block px-2 py-2 mt-2 text-sm font-semibold text-gray-900 flex items-center bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline' do %>
+                      <%= image_tag 'report.svg', alt: 'src', class: 'mr-3 w-6 h-6' %>
                       <%= 'Report'%>
                       <% end %>
                       <div @click.away="open = false" class="relative" x-data="{ open: false }">

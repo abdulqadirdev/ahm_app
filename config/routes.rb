@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   get '/dashboard', to: 'homes#dashboard'
   get '/summary', to: 'homes#summary'
   get '/task_info', to: 'homes#task_info'
+  get '/dash', to: 'homes#dash'
 end

@@ -1,55 +1,25 @@
-<script>
-        window.onload = function () {
-        var chart = new CanvasJS.Chart("chartContainer", {
-           animationEnabled: true,
-           // theme: "#000",
-           title:{
-              horizontalAlign: "left",
-
-           },
-           data: [{
-              type: "doughnut",
-              startAngle: 60,
-              innerRadius: 25,
-              indexLabelFontSize: 8,
-              indexLabel: "{label}",
-              toolTipContent: "{label}: {y}",
-              indexLabelLineThickness: 2,
-              indexLabelLine: false,
-              // indexLabelPlacement : 'inside',
-              // indexLabelLineWidth : 2,
-              dataPoints: [
-                 { y: 67, label: "Inbox", color: "#e11d48", },
-                 { y: 28, label: "Archives", color: '#e85575' },
-                 { y: 28, label: "Archives", color: '#f08ea3' },
-              ]
-           }],
-        });
-        chart.render();
-          
-    }
-        </script>
 
 
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js'></script>
 
 <% content_for :dashboard_wrap do %>
                <%= render 'side_bar' %>
                <div class="xl:col-span-10 col-span-12  md:mt-5 h-full md:col-span-9 md:h-[calc(100vh_-_6.5rem)] overflow-auto bg-white">
-                    <div class="grid grid-cols-12 bg-white gap-4 h-full  relative px-4 pt-4">
+                    <div class="grid grid-cols-12 bg-white gap-4  relative px-4 pt-4">
                         <div class="col-span-8">
-                            <div class="pb-8 border-b-2 border-b-gray-100">
+                            <div class="pb-8 border-b-2 border-b-gray">
                                <div>
                                   <h5 class="text-black mb leading-none text-3xl font-bold">1.Summary</h5>
                                </div>
                             </div>
                         </div>
                         <div class="lg:col-span-2 col-span-6">
-                          <div class="pb-4 border-b-2 border-b-gray-100">
+                          <div class="pb-4 border-b-2 border-b-gray">
                         <a href="#" class="border-2 border-rose-600 text-rose-600 w-full px-4 py-2 bg-white-to-b from-themelight to-theme rounded-md flex items-center justify-center hover:bg-rose-600 hover:text-white"><span class="mr-3"> <i class="fas fa-eye"></i> </span>  Preview</a>  
                       </div>
                       </div>
                       <div class="lg:col-span-2  col-span-6">
-                          <div class="pb-4 border-b-2 border-b-gray-100">
+                          <div class="pb-4 border-b-2 border-b-gray">
                           <a href="#" class="border-2 border-rose-600 text-rose-600 w-full px-4 py-2 bg-white-to-b from-themelight to-theme rounded-md flex items-center justify-center hover:bg-rose-600 hover:text-white"><span class="mr-3"><i class="fas fa-arrow-down"></i></span>  Download</a>  
                       </div> 
                       </div>
@@ -66,7 +36,8 @@
                                         <h6 class="text-sm mb-3"><i class="fa-solid fa-circle text-themexxtlight mr-2"></i> 21</h6>
                                     </div>
                                     <div class="col-span-12 lg:col-span-4 lg:pr-20">
-                                        <div id="chartContainer" style="height: 110px; width: 100%;"></div>
+                                                                   <div class="col-xs-3 text-center" style="width:120px; margin: 0 auto;"><canvas id="piechart" ></canvas></div>
+
                                     </div>
                                     <div class="col-span-12 lg:col-span-4">
                                         <div class="flex w-full p-1">
@@ -129,3 +100,66 @@
            <% end%>
            <%= render 'dashboard_wrap' %>
       <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script>
+var data = {
+	labels: [
+		"Internal",
+		"External",
+		"Exxternal"
+	],
+	datasets: [{
+		data: [40, 60, 80],
+		backgroundColor: [
+			"#e11d48",
+			"#e11d48ad",
+			"#a5153599"
+		],
+		hoverBorderColor: [
+			"#eee", "#eee", "#eee"
+		]
+	}]
+};
+var piectx = document.getElementById("piechart").getContext("2d");
+var pieChart = new Chart(piectx, {
+	type: 'doughnut',
+	data: data,
+	options: {
+		showAllTooltips: true,
+		animation: {
+			animateRotate: true,
+			animateScale: true
+		},
+		elements: {
+			arc: {
+				borderColor: "transparent"
+			}
+		},
+		title: {
+			display: false,
+		},
+		legend: {
+			display: false,
+			position: "bottom",
+			labels: {
+				boxWidth: 30,
+				fontColor: "#999",
+				fontFamily: "Montserrat",
+				fullWidth: true
+			}
+		},
+		tooltips: {
+			enabled: true,
+			bodyFontColor: "#efefef",
+			fontStyle: 'Normal',
+			bodyFontFamily: "Montserrat",
+			cornerRadius: 2,
+			backgroundColor: "#333",
+			xPadding: 7,
+			yPadding: 7,
+			caretSize: 5,
+			bodySpacing: 10
+		}
+
+	}
+});
+</script>
